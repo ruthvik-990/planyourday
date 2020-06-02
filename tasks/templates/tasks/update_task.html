@@ -9,6 +9,7 @@
     {% csrf_token %}
     <!-- {{form.as_p}} -->
     {% for i in form %}
+    {% if i != title %}
     <span style="font-size: 20px;margin-right: 10px;"><b>{{i.label}} : </b>   </span><span>{{i}}</span>
     <br>
     <br>
