@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'todo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Todo_test',
-        'USER': 'postgres',
-        'PASSWORD': 'lelouch',
-        'HOST': 'localhost',
+        'NAME': 'd9uenuesd2j2ev',
+        'USER': 'zfxpjzfdomeahq',
+        'PASSWORD': 'c52113fb4709e71856e20a58b9412fb915f767151266c79e2e3ca5d2eb188c1d',
+        'HOST': 'ec2-18-232-143-90.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
