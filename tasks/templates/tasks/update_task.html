@@ -9,8 +9,11 @@
     {% csrf_token %}
     <!-- {{form.as_p}} -->
     {% for i in form %}
-    {% if i.label != 'Profile' %}
-    <span style="font-size: 20px;margin-right: 10px;"><b>{{i.label}} : </b>   </span><span>{{i}}</span>
+    {% if i.label == 'Profile' %}
+    <span class="invisible" style="font-size: 20px;margin-right: 10px;"><b>{{i.label}} : </b>   </span><span class="invisible">{{i}}</span>
+    <br>
+    {% else %}
+    <span  style="font-size: 20px;margin-right: 10px;"><b>{{i.label}} : </b>   </span><span >{{i}}</span>
     <br>
     <br>
     {% endif %}
