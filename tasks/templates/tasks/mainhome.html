@@ -1,0 +1,86 @@
+{% extends "tasks/main.html" %}
+{% load static %}
+{% block content %}
+
+<div id="header" style="height:75px;" class=" container-fluid text-center text-white mt-1 " >
+    
+        <h1 class="d-inline ">PlanYourDay.</h1><span>com</span>
+        <hr >
+        
+</div>
+<div class="container-fluid">
+    <div id="body" class="container h-50">
+    
+        <div id="mycarousel" class="carousel slide " >
+            <ul class="carousel-indicators">
+                <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#mycarousel" data-slide-to="1"></li>
+                <li data-target="#mycarousel" data-slide-to="2"></li>
+            </ul>
+            <div class="carousel-inner" style="height:auto">
+                <div class="carousel-item active">
+                    <img  src='{% static "pic1.jpg" %}' alt="pic1" class="img-fluid rounded">
+                    <div class="carousel-caption text-success">
+                        <h6> <b> PlanYourDay.com </b> <br>
+                        Plan your day for today and everyday,then work your plan...
+                    </h6>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src='{% static "pic2.jpg" %}' alt="pic2" class="img-fluid rounded">
+                    <div class="carousel-caption text-primary">
+                       <h6><b> PlanYourDay.com </b><br>
+                        Plan your day for today and everyday,then work your plan...
+                    </h6>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src='{% static "pic3.jpg" %}' alt="pic3" class="img-fluid rounded">
+                    <div class="carousel-caption text-danger">
+                       <h6> <b> PlanYourDay.com </b><br>
+                        Plan your day for today and everyday,then work your plan...
+                    </h6>
+                    </div>
+                </div>
+    
+            </div>
+            <a href= "#mycarousel" class="carousel-control-prev" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+            <a href="#mycarousel" class="carousel-control-next" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+        
+        </div>
+    </div>
+
+    <div >
+        INFO ABOUT WEBSITE
+    </div>
+    <div class="text-center">
+       <h3> What are you waiting for sign in and plan your day.</h3>
+        <br>
+        <a href="{% url 'login' %}" class="btn btn-dark text-white ">Login</a>
+        <a href="{% url 'register' %}" class="btn btn-dark text-white ">Sign Up</a>
+
+    </div>
+    <br>
+    <h2 class="text-center "> <b> Why you need to Plan?... </b></h2>
+    <div class="container text-center text-white rounded p-4" style="background-color: rgb(14, 93, 184);">
+        <div class="container blockquote my-5"> <b> “Plans are of little importance, but planning is essential.” </b><br><span class="text-light ">― Winston Churchill, former British Prime Minister</span></div>
+        
+        <div class="container blockquote  my-5"> <b> “Plans are nothing; planning is everything.” </b><br><span class="text-light ">― Dwight D. Eisenhower, former U.S. President </span></div>
+        
+        <div class="container blockquote my-5"> <b> “The more time you spend contemplating what you should have done… you lose valuable time planning what you can and will do.” </b><br><span class="text-light ">― Lil Wayne, rapper</span></div>
+        
+        <div class="container blockquote my-5"> <b> “A man who does not plan long ahead will find trouble at his door.”</b><br><span class="text-light ">― Confucius, Chinese philosopher</span></div>
+        
+        <div class="container blockquote my-5"> <b> “Always plan ahead. It wasn’t raining when Noah built the ark.” </b><br><span class="text-light ">― Richard Cushing, American prelate of the Roman Catholic Church</span></div>
+        
+        <div class="container blockquote my-5"> <b> “Few people have any next, they live from hand to mouth without a plan, and are always at the end of their line.”</b><br><span class="text-light "> ― Ralph Waldo Emerson, poet and essayist</span></div>
+        
+        <div class="container blockquote my-5"> <b> “Every minute you spend in planning saves 10 minutes in execution; this gives you a 1,000 percent return on energy!” </b><br><span class="text-light ">― Brian Tracy, author and motivational speaker</span></div>
+        
+        <div class="container blockquote my-5"> <b> “Our goals can only be reached through a vehicle of a plan, in which we must fervently believe, and upon which we must vigorously act. There is no other route to success.”</b><br><span class="text-light ">― Pablo Picasso, painter</span></div>
+
+    </div>
+
+</div>
+{% endblock %}
+

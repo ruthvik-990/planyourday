@@ -1,0 +1,22 @@
+{% extends 'tasks/main.html' %}
+
+
+{% block content %}
+
+<div class="container text-center mt-5">
+
+    <h1><b>Enter your new password.</b></h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {% for i in form %}
+        {{i.label}} : {{i}}
+        <br><br>
+
+        {% endfor %}
+        <input class="btn btn-success mt-3" type="submit" value="Reset Password">
+    </form>
+
+
+</div>
+
+{% endblock %}

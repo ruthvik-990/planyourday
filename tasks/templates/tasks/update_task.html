@@ -1,0 +1,23 @@
+{% extends 'tasks/main.html' %}
+
+
+{% block content %}
+<div class="container-sm text-center">
+<h1 class="display-4" style="margin-top: 100px;">Update task</h1>
+
+<form style="margin-top: 50px;" action="" method="POST">
+    {% csrf_token %}
+    <!-- {{form.as_p}} -->
+    {% for i in form %}
+    <span style="font-size: 20px;margin-right: 10px;"><b>{{i.label}} : </b>   </span><span>{{i}}</span>
+    <br>
+    <br>
+
+    {% endfor %}
+
+    <input class="btn btn-lg btn-success" type="submit" value="Update">
+</form>
+</div>
+
+
+{% endblock %}

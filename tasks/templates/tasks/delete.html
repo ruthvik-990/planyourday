@@ -1,0 +1,16 @@
+{% extends 'tasks/main.html' %}
+
+
+{% block content %}
+
+<div class="container-sm text-center rounded" style="background-color:darkorange;">
+<h3 class="mt-5">Are you sure you want to delete <b>"{{item}}"</b> ?</h3>
+<a class="btn  btn-secondary my-2" href="{% url 'list' %}">Cancel</a>
+<form action="" method="POST">
+    {% csrf_token %}
+    <input class="btn  btn-danger " type="submit" value="Delete">
+</form>
+
+</div>
+
+{% endblock %}

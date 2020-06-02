@@ -1,0 +1,37 @@
+{% extends 'tasks/main.html' %}
+
+
+{% block content %}
+
+<div class="container-sm text-center w-75 mt-2" style="background-color: rgb(106, 224, 59);">
+<h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">PlanYourDay</h1>
+<div class="text-right mt-n4 mb-2"><i class="material-icons pt-2" style="font-size:36px">person</i>Hello,{{request.user}} <span class="ml-3"><a href="{% url 'logout' %}" class=" btn btn-sm btn-danger">Logout</a>
+</span> </div>
+<form action="" method="POST">
+    {% csrf_token %}
+    <!-- {{form.profile}} -->
+    <label for="" class=""> <h6> Enter Task : </h6></label>
+    {{form.title}}
+    
+    <input class="btn  btn-primary" type="submit" value="Create">
+
+</form>
+{% for task in tasks %}
+<div class="container-fluid  m-2 p-2 row">
+    
+    <a class="btn btn-sm btn-warning col-2 mr-1 rounded" href="{% url 'update_task' task.id %}">Edit</a>
+    <a class="btn btn-sm btn-danger col-2 mr-1 rounded" href="{% url 'delete' task.id %}">Delete</a>
+    {% if task.status == True %}
+    <strike class="col bg-info rounded">{{task}}</strike>
+    {% else %}
+    <span class="col bg-dark text-white rounded"><b>{{task}}</b></span>
+    {% endif %}
+
+</div>
+
+{% endfor %}
+<br>
+<!-- <h1>Welcome {{request.user}}</h1>
+<a href="{% url 'logout' %}">Logout</a> -->
+</div>
+{% endblock %}

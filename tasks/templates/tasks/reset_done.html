@@ -1,0 +1,15 @@
+{% extends 'tasks/main.html' %}
+
+
+{% block content %}
+
+<div class="container text-center mt-5">
+    <h4> <b> Congratulations, your password has been reset!</b></h4>
+    <br>
+
+    <a class="btn btn-success btn-lg" href="{% url 'login' %}">Go to Login Page</a>
+
+</div>
+
+
+{% endblock %}
