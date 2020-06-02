@@ -9,11 +9,11 @@
     {% csrf_token %}
     <!-- {{form.as_p}} -->
     {% for i in form %}
-    {% if i != title %}
+    {% if i.label != 'Profile' %}
     <span style="font-size: 20px;margin-right: 10px;"><b>{{i.label}} : </b>   </span><span>{{i}}</span>
     <br>
     <br>
-
+    {% endif %}
     {% endfor %}
 
     <input class="btn btn-lg btn-success" type="submit" value="Update">
