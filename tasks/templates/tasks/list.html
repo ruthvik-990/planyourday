@@ -20,7 +20,7 @@
 <div class="container-fluid  m-2 p-2 row">
     
     <a class="btn btn-sm btn-warning col-2 mr-1 rounded" href="{% url 'update_task' task.id %}">Edit</a>
-    <a class="btn btn-sm btn-danger col-2 mr-1 rounded" href="{% url 'delete' task.id %}">Delete</a>
+    <a class="btn btn-sm btn-danger col-2 mr-1 rounded" href="{% url 'delete' task.id %}">&times;</a>
     {% if task.status == True %}
     <strike class="col bg-info rounded">{{task}}</strike>
     {% else %}
